@@ -2,7 +2,7 @@
 % Please edit documentation in R/conversion.R
 \name{specific_gravity_to_api}
 \alias{specific_gravity_to_api}
-\title{Convert Speciific Gravity of oil or condensate to API}
+\title{Convert Specific Gravity of oil or condensate to API}
 \usage{
 specific_gravity_to_api(sg)
 }
@@ -10,5 +10,5 @@ specific_gravity_to_api(sg)
 \item{sg}{specific gravity of oil or condensate}
 }
 \description{
-Convert Speciific Gravity of oil or condensate to API
+Convert Specific Gravity of oil or condensate to API
 }

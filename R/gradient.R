@@ -3,7 +3,7 @@
 #'
 #' @param bht bottomhole temperature, deg F
 #' @param wht wellhead temperature, deg F
-#' @depth.bh  depth at bottohole, feet
+#' @param depth.bh  depth at bottohole, feet
 #' @export
 calc_temperature_gradient <- function(bht, wht, depth.bh) {
     stopifnot(depth.bh != 0)

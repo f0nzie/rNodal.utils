@@ -10,6 +10,8 @@ calc_temperature_gradient(bht, wht, depth.bh)
 \item{bht}{bottomhole temperature, deg F}
 
 \item{wht}{wellhead temperature, deg F}
+
+\item{depth.bh}{depth at bottohole, feet}
 }
 \description{
 Calculate the temperature gradient based on bottomhole and wellhead temperature
