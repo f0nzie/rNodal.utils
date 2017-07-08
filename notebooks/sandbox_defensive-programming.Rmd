@@ -1,0 +1,65 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Use defensive programming techniques to make the function calc_sum_stat more robust.
+
+```{r}
+calc_sum_stat <- function(df, cols) {
+  df_sub <- df[, cols, drop = FALSE]
+  sum_stat <- apply(df_sub, 1, mean)
+  return(sum_stat)
+}
+```
+
+Some specific ideas:
+
+* Assert that the input df is not empty (hint: use dim)
+* Assert that cols is a character vector
+* Assert that the columns listed in cols are in df (hint: use %in% and colnames)
+* Assert that df_sub is a data frame (hint: use is.data.frame)
+* Assert that sum_stat is not NA
+* Issue a warning if cols only contains one column (since taking the mean of one column isn’t very useful, the user may have made a mistake)
+
+```{r}
+calc_sum_stat <- function(df, cols) {
+  stopifnot(dim(df) != c(0,0), is.character(cols), cols %in% names(df))
+  if (length(cols) == 1) {
+    warning("taking the mean of one column may not be very useful")
+    cat("\n")
+  }
+  df_sub <- df[, cols, drop = FALSE]
+  stopifnot(is.data.frame(df_sub))
+  sum_stat <- apply(df_sub, 1, mean)
+  stopifnot(!is.na(sum_stat))
+  return(sum_stat)
+}
+```
+
+
+
+```{r}
+set.seed(123)
+dn <- data.frame(a = rnorm(5,1), b = rnorm(5,1), c = rnorm(5,1))
+calc_sum_stat(dn, "a")
+# calc_sum_stat(dn, 1)  [1] 0.4395244 0.7698225 2.5587083 1.0705084 1.1292877
+# calc_sum_stat(dn, 2)  [1] 2.7150650  1.4609162 -0.2650612  0.3131471  0.5543380
+```
+
+```{r}
+set.seed(123)
+dn <- data.frame(a = rnorm(5,1), b = rnorm(5,1), c = rnorm(5,1))
+calc_sum_stat(dn, c("a", "b"))
+# calc_sum_stat(dn, 1)  [1] 0.4395244 0.7698225 2.5587083 1.0705084 1.1292877
+# calc_sum_stat(dn, 2)  [1] 2.7150650  1.4609162 -0.2650612  0.3131471  0.5543380
+```
+
+
+```{r}
+set.seed(123)
+dn <- data.frame(a = rnorm(5,1), b = rnorm(5,1), c = rnorm(5,1))
+calc_sum_stat(dn, 1)
+# calc_sum_stat(dn, 1)  [1] 0.4395244 0.7698225 2.5587083 1.0705084 1.1292877
+# calc_sum_stat(dn, 2)  [1] 2.7150650  1.4609162 -0.2650612  0.3131471  0.5543380
+```
