@@ -2,6 +2,8 @@
 * add function for API and specific gravity
 * add calculation of temperature gradient
 * add tests
+* add README
+* 
 
 ## 20170706 0.0.1
 * add core files
