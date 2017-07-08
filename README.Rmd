@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# rNodal.utils
+The goal of rNodal.utils is to provide base functions for all rNodal.* packages.
+
+
+## Installation
+
+You can install rNodal.utils from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("f0nzie/rNodal.utils")
+```
+
+
+## Examples
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(rNodal.utils)
+
+## temperature gradient
+
+calc_temperature_gradient(bht = 200, wht = 80, depth.bh = 5000)
+```
+
+```{r}
+# convert API to specific gravity
+api_to_specific_gravity(api = 40)
+```
+
+```{r}
+# named list of objects
+temp.gradient <- calc_temperature_gradient(bht = 240, wht = 95, depth.bh = 9000)
+oil.sg <- api_to_specific_gravity(api = 35)
+
+rNodal.utils:::as_named_list(temp.gradient, oil.sg)
+```
+
