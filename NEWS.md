@@ -2,4 +2,5 @@
 * add core files
 * add first tests
 * add constants
+* no pre-commit hook yet
 
