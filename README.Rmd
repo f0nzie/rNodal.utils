@@ -50,3 +50,35 @@ oil.sg <- api_to_specific_gravity(api = 35)
 rNodal.utils:::as_named_list(temp.gradient, oil.sg)
 ```
 
+
+## importFromExamples
+
+```{r}
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+ODE()
+```
+
+
+## showMethods2
+
+
+```{r}
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+showMethods2("ODE")
+```
+
+
+```{r}
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+ode <-  ODE()
+showMethods2(ode)
+```
+
+
+

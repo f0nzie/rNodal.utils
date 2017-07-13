@@ -2,5 +2,9 @@
 
 export(api_to_specific_gravity)
 export(calc_temperature_gradient)
+export(get_extdata_dir)
+export(importFromExamples)
+export(showMethods2)
 export(specific_gravity_to_api)
+importFrom(methods,showMethods)
 importFrom(stats,setNames)
