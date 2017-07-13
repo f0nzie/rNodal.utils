@@ -1,7 +1,7 @@
 Package: rNodal.utils
 Type: Package
 Title: Provide Utilities and tools for Nodal Analysis in oil and gas wells
-Version: 0.0.2
+Version: 0.0.3
 Author: Alfonso R. Reyes <alfonso.reyes@oilgainsanalytics.com>
 Maintainer: Alfonso R. Reyes <alfonso.reyes@oilgainsanalytics.com>
 Description: Function, utilities and data for rNodal packages used in the
