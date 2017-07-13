@@ -15,8 +15,8 @@ You can install rNodal.utils from github with:
 devtools::install_github("f0nzie/rNodal.utils")
 ```
 
-Example
--------
+Examples
+--------
 
 This is a basic example which shows you how to solve a common problem:
 
