@@ -47,3 +47,39 @@ rNodal.utils:::as_named_list(temp.gradient, oil.sg)
 #> $oil.sg
 #> [1] 0.8498498
 ```
+
+importFromExamples
+------------------
+
+``` r
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+ODE()
+#> An object of class "ODE"
+#> Slot "state":
+#> numeric(0)
+#> 
+#> Slot "rate":
+#> numeric(0)
+```
+
+showMethods2
+------------
+
+``` r
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+showMethods2("ODE")
+#> [1] "getRate"    "getState"   "initialize" "show"
+```
+
+``` r
+library(rNodal.utils)
+importFromExamples("ODE.R", aPackage = "rNodal.utils")
+
+ode <-  ODE()
+showMethods2(ode)
+#> [1] "getRate"    "getState"   "initialize" "show"
+```

@@ -60,6 +60,10 @@ importFromExamples("ODE.R", aPackage = "rNodal.utils")
 ODE()
 ```
 
+
+## showMethods2
+
+
 ```{r}
 library(rNodal.utils)
 importFromExamples("ODE.R", aPackage = "rNodal.utils")
@@ -68,7 +72,6 @@ showMethods2("ODE")
 
 ```
 
-## showMethods2
 
 ```{r}
 library(rNodal.utils)
@@ -76,7 +79,6 @@ importFromExamples("ODE.R", aPackage = "rNodal.utils")
 
 ode <-  ODE()
 showMethods2(ode)
-
 ```
 
 
