@@ -69,7 +69,6 @@ library(rNodal.utils)
 importFromExamples("ODE.R", aPackage = "rNodal.utils")
 
 showMethods2("ODE")
-
 ```
 
 
