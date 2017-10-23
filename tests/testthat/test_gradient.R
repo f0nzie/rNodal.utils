@@ -1,6 +1,6 @@
 library(testthat)
 
-context("test temperature gradient")
+context("temperature_gradient")
 
 test_that("calc_temperature_gradient works", {
     res <- calc_temperature_gradient(bht = 200, wht = 60, depth.bh = 5000)

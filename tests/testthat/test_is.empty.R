@@ -1,7 +1,6 @@
 library(testthat)
-library(bazar)
 
-context("test is.empty")
+context("is.empty")
 
 test_that("is.empty of c() yields TRUE", {
   expect_true(is.empty(c()))

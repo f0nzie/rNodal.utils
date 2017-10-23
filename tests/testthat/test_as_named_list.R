@@ -1,6 +1,6 @@
 library(testthat)
 
-context("test as_named_list")
+context("as_named_list")
 
 test_that("as_named_list return names without being explicit", {
   a = 1
