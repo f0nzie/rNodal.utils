@@ -1,4 +1,5 @@
 ## 20170713 0.0.3
+* add tests for misc.R. coverage=82.35%
 * add code coverage and continuous integration
 * add two new functions showMethods2 and importFromExamples to misc.R.
 * add examples in README for new functions
