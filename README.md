@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rNodal.utils)](https://cran.r-project.org/package=rNodal.utils) [![Travis-CI Build Status](https://travis-ci.org/f0nzie/rNodal.utils.svg?branch=master)](https://travis-ci.org/f0nzie/rNodal.utils) [![codecov](https://codecov.io/gh/f0nzie/rNodal.utils/branch/master/graph/badge.svg)](https://codecov.io/gh/f0nzie/rNodal.utils)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rNodal.utils)](https://cran.r-project.org/package=rNodal.utils)[![Travis-CI Build Status](https://travis-ci.org/f0nzie/rNodal.utils.svg?branch=master)](https://travis-ci.org/f0nzie/rNodal.utils)[![codecov](https://codecov.io/gh/f0nzie/rNodal.utils/branch/develop/graph/badge.svg)](https://codecov.io/gh/f0nzie/rNodal.utils)
 
 rNodal.utils
 ============
