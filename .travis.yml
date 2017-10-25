@@ -4,12 +4,5 @@ language: R
 sudo: false
 cache: packages
 
-r_packages:
-  - covr
-
-r_github_packages:
-  - f0nzie/rNodal.utils
-
-
 after_success:
   - Rscript -e 'covr::codecov()
