@@ -33,3 +33,11 @@ test_that("example file name is OK and loads file", {
     importFromExamples(aClassFile = "ODE.R",
                                     aPackage = "rNodal.utils")
 })
+
+
+
+context("showMethods2")
+
+expect_equal(showMethods2("data.frame"), c("$<-", "[[<-", "[<-", "slotsFromS3"))
+expect_equal(showMethods2("structure"), c("Math",  "Math2", "Ops"))
+expect_equal(showMethods2("array"), c("coerce", "initialize", "Ops" ))
