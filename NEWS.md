@@ -1,4 +1,5 @@
 ## 20170713 0.0.3
+* add code coverage and continuous integration
 * add two new functions showMethods2 and importFromExamples to misc.R.
 * add examples in README for new functions
 * add folder inst/examples
