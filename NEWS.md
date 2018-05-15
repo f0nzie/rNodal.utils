@@ -1,3 +1,7 @@
+## 20180515
+* add function save_to_project
+* add rprojrootto Imports
+
 ## 20170713 0.0.3
 * add tests for misc.R. coverage=82.35%
 * add code coverage and continuous integration

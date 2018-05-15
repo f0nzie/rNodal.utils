@@ -132,6 +132,13 @@ stopif <-
     }
 
 
+
+
+
+
+
+
+
 # dotest_applications <- function(aPackage, goDebug = FALSE) {
 #     examples <- get_list_examples(aPackage)
 #     # loop to open each file
@@ -159,3 +166,22 @@ stopif <-
 #         i <- i + 1
 #     }
 # }
+
+
+#' Save an object to an rda file
+#'
+#' Saves the file to the project onst/extdata folder
+#' @param ... any object
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+save_to_project <- function(..., name = NULL) {
+    if (is.null(name)) stop("provide a name for the rda file")
+    rstudio_root <- rprojroot::find_rstudio_root_file()
+    extdata <- file.path(rstudio_root, "inst", "extdata")
+    if (!dir.exists(extdata)) dir.create(extdata)
+    rda_fname <- file.path(extdata, paste(name, "rda", sep = "."))
+    save(..., file = rda_fname)
+    if(!file.exists(rda_fname)) stop("file was not created")
+    cat(sprintf("File %s has been created", rda_fname))
+}
