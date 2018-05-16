@@ -185,3 +185,22 @@ save_to_project <- function(..., name = NULL) {
     if(!file.exists(rda_fname)) stop("file was not created")
     cat(sprintf("File %s has been created", rda_fname))
 }
+
+
+#' Load an object from rda file
+#'
+#' Load the file to the project onst/extdata folder
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+load_from_project <- function(name = NULL) {
+    root_rstudio <- rprojroot::find_rstudio_root_file()
+    rda_filename <- paste(name, "rda", sep = ".")
+    rda_filename <- file.path(root_rstudio, "inst/extdata", rda_filename)
+    if (!file.exists(rda_filename)) stop("rda file does not exist")
+    # load to the global environment
+    load(file = rda_filename, envir = parent.frame())
+    cat(sprintf("File %s has just been loaded", rda_filename))
+}
+
+
