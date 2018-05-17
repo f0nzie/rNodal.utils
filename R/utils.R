@@ -204,3 +204,14 @@ load_from_project <- function(name = NULL) {
 }
 
 
+#' @export
+save_csv_to_project <- function(object, name = NULL) {
+    if (is.null(name)) stop("provide a name for the csv file")
+    rstudio_root <- rprojroot::find_rstudio_root_file()
+    extdata <- file.path(rstudio_root, "inst", "extdata")
+    if (!dir.exists(extdata)) dir.create(extdata)
+    csv_fname <- file.path(extdata, paste(name, "csv", sep = "."))
+    write.csv(x = object, file = csv_fname, row.names = FALSE)
+    if(!file.exists(csv_fname)) stop("file was not created")
+    cat(sprintf("File %s has been created", csv_fname))
+}
