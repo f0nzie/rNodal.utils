@@ -175,7 +175,7 @@ stopif <-
 #' @param name the name of the dataset
 #' @import rprojroot
 #' @export
-save_to_project <- function(..., name = NULL) {
+save_rda_to_project <- function(..., name = NULL) {
     if (is.null(name)) stop("provide a name for the rda file")
     rstudio_root <- rprojroot::find_rstudio_root_file()
     extdata <- file.path(rstudio_root, "inst", "extdata")
@@ -187,13 +187,26 @@ save_to_project <- function(..., name = NULL) {
 }
 
 
-#' Load an object from rda file
+#' Save an object to an rda file
 #'
-#' Load the file to the project onst/extdata folder
+#' Saves the file to the project onst/extdata folder
+#' @param ... any object
 #' @param name the name of the dataset
 #' @import rprojroot
 #' @export
-load_from_project <- function(name = NULL) {
+save_to_project <- function(..., name = NULL) {
+    .Deprecated("save_rda_to_project", package = "rNodal.utils")
+    save_rda_to_project(..., name = name)
+}
+
+
+#' Load an object from rda file
+#'
+#' Load the file to the project inst/extdata folder
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+load_rda_from_project <- function(name = NULL) {
     root_rstudio <- rprojroot::find_rstudio_root_file()
     rda_filename <- paste(name, "rda", sep = ".")
     rda_filename <- file.path(root_rstudio, "inst/extdata", rda_filename)
@@ -201,6 +214,17 @@ load_from_project <- function(name = NULL) {
     # load to the global environment
     load(file = rda_filename, envir = parent.frame())
     cat(sprintf("File %s has just been loaded", rda_filename))
+}
+
+#' Load an object from an rda file
+#'
+#' Load the file to the project inst/extdata folder
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+load_from_project <- function(name = NULL) {
+    .Deprecated("load_rda_from_project", package = "rNodal.utils")
+    load_rda_from_project(name = name)
 }
 
 
