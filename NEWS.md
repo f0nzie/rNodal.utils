@@ -1,6 +1,10 @@
+## 20180519
+* add save_csv_to_project
+* add read_csv_from_project
+
 ## 20180515
 * add function save_to_project
-* add rprojrootto Imports
+* add rprojroot to Imports
 
 ## 20170713 0.0.3
 * add tests for misc.R. coverage=82.35%
