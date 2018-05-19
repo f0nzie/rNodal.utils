@@ -239,3 +239,17 @@ save_csv_to_project <- function(object, name = NULL) {
     if(!file.exists(csv_fname)) stop("file was not created")
     cat(sprintf("File %s has been created", csv_fname))
 }
+
+
+#' @export
+read_csv_from_project <- function(name = NULL) {
+    if (is.null(name)) stop("provide a name for the csv file")
+    rstudio_root <- rprojroot::find_rstudio_root_file()
+    extdata <- file.path(rstudio_root, "inst", "extdata")
+    csv_fname <- file.path(extdata, paste(name, "csv", sep = "."))
+    if (!file.exists(csv_fname)) stop("csv file does not exist")
+    obj <- readr::read_csv(file = csv_fname)
+    cat(sprintf("File %s has just been read", csv_fname))
+    return(obj)
+}
+
