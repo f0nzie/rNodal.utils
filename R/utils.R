@@ -227,7 +227,12 @@ load_from_project <- function(name = NULL) {
     load_rda_from_project(name = name)
 }
 
-
+#' Save a CSV file to a project folder inst/extdata
+#' It saves time from specifying path and everything
+#'
+#' @param object it is R object to save
+#' @param name the name of the dataset, no extension
+#' @importFrom utils write.csv
 #' @export
 save_csv_to_project <- function(object, name = NULL) {
     if (is.null(name)) stop("provide a name for the csv file")
@@ -241,6 +246,10 @@ save_csv_to_project <- function(object, name = NULL) {
 }
 
 
+#' Read a CSV file from a project folder inst/extdata
+#' It saves time from specifying path and everything
+#'
+#' @param name the name of the dataset, no extension
 #' @export
 read_csv_from_project <- function(name = NULL) {
     if (is.null(name)) stop("provide a name for the csv file")

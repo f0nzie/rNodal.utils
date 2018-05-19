@@ -8,7 +8,8 @@ Description: Function, utilities and data for rNodal packages used in the
     Nodal Analyisis of oil and gas wells.
 Depends: R (>= 3.2)    
 Imports: methods,
-    rprojroot
+    rprojroot,
+    readr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
