@@ -187,18 +187,6 @@ save_rda_to_project <- function(..., name = NULL) {
 }
 
 
-#' Save an object to an rda file
-#'
-#' Saves the file to the project onst/extdata folder
-#' @param ... any object
-#' @param name the name of the dataset
-#' @import rprojroot
-#' @export
-save_to_project <- function(..., name = NULL) {
-    .Deprecated("save_rda_to_project", package = "rNodal.utils")
-    save_rda_to_project(..., name = name)
-}
-
 
 #' Load an object from rda file
 #'
@@ -216,16 +204,6 @@ load_rda_from_project <- function(name = NULL) {
     cat(sprintf("File %s has just been loaded", rda_filename))
 }
 
-#' Load an object from an rda file
-#'
-#' Load the file to the project inst/extdata folder
-#' @param name the name of the dataset
-#' @import rprojroot
-#' @export
-load_from_project <- function(name = NULL) {
-    .Deprecated("load_rda_from_project", package = "rNodal.utils")
-    load_rda_from_project(name = name)
-}
 
 #' Save a CSV file to a project folder inst/extdata
 #' It saves time from specifying path and everything
@@ -262,3 +240,29 @@ read_csv_from_project <- function(name = NULL) {
     return(obj)
 }
 
+
+
+
+
+#' Load an object from an rda file
+#'
+#' Load the file to the project inst/extdata folder
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+load_from_project <- function(name = NULL) {
+    .Deprecated("load_rda_from_project", package = "rNodal.utils")
+    load_rda_from_project(name = name)
+}
+
+#' Save an object to an rda file
+#'
+#' Saves the file to the project onst/extdata folder
+#' @param ... any object
+#' @param name the name of the dataset
+#' @import rprojroot
+#' @export
+save_to_project <- function(..., name = NULL) {
+    .Deprecated("save_rda_to_project", package = "rNodal.utils")
+    save_rda_to_project(..., name = name)
+}
