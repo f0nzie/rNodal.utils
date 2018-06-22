@@ -23,7 +23,7 @@ You can install rNodal.utils from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("f0nzie/rNodal.utils")
+devtools::install_github("f0nzie/rNodal.utils", ref = "develop")
 ```
 
 
