@@ -183,7 +183,7 @@ save_rda_to_project <- function(..., name = NULL) {
     rda_fname <- file.path(extdata, paste(name, "rda", sep = "."))
     save(..., file = rda_fname)
     if(!file.exists(rda_fname)) stop("file was not created")
-    cat(sprintf("File %s has been created", rda_fname))
+    cat(sprintf("File %s has been created \n", rda_fname))
 }
 
 
@@ -201,7 +201,7 @@ load_rda_from_project <- function(name = NULL) {
     if (!file.exists(rda_filename)) stop("rda file does not exist")
     # load to the global environment
     load(file = rda_filename, envir = parent.frame())
-    cat(sprintf("File %s has just been loaded", rda_filename))
+    cat(sprintf("File %s has just been loaded \n", rda_filename))
 }
 
 
