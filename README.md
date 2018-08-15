@@ -1,22 +1,25 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-rNodal.utils
-============
 
-The goal of rNodal.utils is to provide base functions for all rNodal.\* packages.
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rNodal.utils)](https://cran.r-project.org/package=rNodal.utils)[![Travis-CI
+Build
+Status](https://travis-ci.org/f0nzie/rNodal.utils.svg?branch=develop)](https://travis-ci.org/f0nzie/rNodal.utils)[![codecov](https://codecov.io/gh/f0nzie/rNodal.utils/branch/develop/graph/badge.svg)](https://codecov.io/gh/f0nzie/rNodal.utils)
 
-Installation
-------------
+# rNodal.utils
+
+The goal of rNodal.utils is to provide base functions for all rNodal.\*
+packages.
+
+## Installation
 
 You can install rNodal.utils from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("f0nzie/rNodal.utils")
+devtools::install_github("f0nzie/rNodal.utils", ref = "develop")
 ```
 
-Examples
---------
+## Examples
 
 This is a basic example which shows you how to solve a common problem:
 
@@ -48,8 +51,7 @@ rNodal.utils:::as_named_list(temp.gradient, oil.sg)
 #> [1] 0.8498498
 ```
 
-importFromExamples
-------------------
+## importFromExamples
 
 ``` r
 library(rNodal.utils)
@@ -64,8 +66,7 @@ ODE()
 #> numeric(0)
 ```
 
-showMethods2
-------------
+## showMethods2
 
 ``` r
 library(rNodal.utils)

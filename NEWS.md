@@ -1,4 +1,14 @@
+## 20180519
+* add save_csv_to_project
+* add read_csv_from_project
+
+## 20180515
+* add function save_to_project
+* add rprojroot to Imports
+
 ## 20170713 0.0.3
+* add tests for misc.R. coverage=82.35%
+* add code coverage and continuous integration
 * add two new functions showMethods2 and importFromExamples to misc.R.
 * add examples in README for new functions
 * add folder inst/examples

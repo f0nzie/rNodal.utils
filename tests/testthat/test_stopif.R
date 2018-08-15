@@ -1,11 +1,10 @@
 library(testthat)
-library(bazar)
 
 # If any of the expressions in ... are not all FALSE, stop is called, producing
 # an error message indicating the first of the elements of ... which were not
 # false.
 
-context("test stopif")
+context("stopif")
 
 test_that("stopif passes for all FALSE statements", {
   expect_null(stopif(FALSE, FALSE))

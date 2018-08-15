@@ -4,7 +4,11 @@
 #' @param pkgname the name of the package
 #' @export
 get_extdata_dir <- function(pkgname) {
-  system.file("extdata", package = pkgname)
+    if (missing(pkgname)) stop("package name not provided")
+    if (nchar(pkgname) == 0) stop("a package name has to be entered")
+    sys_file <- system.file("extdata", package = pkgname)
+    if (nchar(sys_file) == 0) stop("folder does not exist")
+    return(sys_file)
 }
 
 
@@ -42,10 +46,16 @@ showMethods2 <- function(theClass) {
 #' @param aPackage   a package where the folder and class resides
 #' @export
 importFromExamples <- function(aClassFile, aFolder = "examples", aPackage) {
-    source(paste(system.file(aFolder,
-                             package = aPackage),
-                 aClassFile,
-                 sep ="/"), echo = FALSE)
+    if (missing(aClassFile)) stop("script with classes not provided")
+    if (missing(aPackage)) stop("package name not provided")
+    ex_dir <- system.file(aFolder, package = aPackage)
+    if (nchar(ex_dir) == 0) stop("examples folder does not exist")
+    # ex_file <- system.file(aFolder, aClassFile, package = aPackage)
+    exfile_exists <- file.exists(paste(ex_dir, aClassFile, sep ="/"))
+    if (!exfile_exists) stop("incorrect example filename")
+    # if (nchar(ex_file) == 0) stop("file with classes does not exist")
+    ex_file <- system.file(aFolder, aClassFile, package = aPackage)
+    source(ex_file, echo = FALSE)
 }
 
 

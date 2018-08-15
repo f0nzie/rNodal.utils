@@ -3,6 +3,7 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rNodal.utils)](https://cran.r-project.org/package=rNodal.utils)[![Travis-CI Build Status](https://travis-ci.org/f0nzie/rNodal.utils.svg?branch=develop)](https://travis-ci.org/f0nzie/rNodal.utils)[![codecov](https://codecov.io/gh/f0nzie/rNodal.utils/branch/develop/graph/badge.svg)](https://codecov.io/gh/f0nzie/rNodal.utils)
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
@@ -22,7 +23,7 @@ You can install rNodal.utils from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("f0nzie/rNodal.utils")
+devtools::install_github("f0nzie/rNodal.utils", ref = "develop")
 ```
 
 
